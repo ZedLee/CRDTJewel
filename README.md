@@ -1,9 +1,9 @@
 # CRDTJewel
-A multiplayers jewel implementation via operation-based CRDT, reliable commucation provided by zero message queue
+A multiplayers jewel implementation via operation-based CRDT, reliable communication provided by zero message queue
 
 ## Introduction
-Operation-based CRDTs only send its update operation to other replicas and expect them to repeat the update operation. This also an advantage compare to Convergent Replicated Data Type, because the full state contains more redundancy and use more bandwidth in transmission. See figure 1 below, we can tell downstream replicas eventually will execute the operations F() and G() in any sequence, but the result of synchronization may not be same for all replicas because of different sequence of execution, therefore, the working conditions of operation-based replication would be slightly complicated than state-based replication. In this model where the updates are broadcast to all replicas, an object for which all concurrent updates are commutative is called CmRDT (commutative replicated data type).<br>
-<img src="https://github.com/ZedLee/CRDTJewel/blob/master/img/WechatIMG2831.jpeg" width="640" height="280" text-align:center></img>
+Operation-based CRDTs only send its update operation to other replicas and expect them to repeat the update operation. This also an advantage compare to Convergent Replicated Data Type, because the full state contains more redundancy and use more bandwidth in transmission. See figure below, we can tell downstream replicas eventually will execute the operations F() and G() in any sequence, but the result of synchronization may not be same for all replicas because of different sequence of execution. Therefore, the working conditions of operation-based replication would be slightly complicated than state-based replication, And I using ZeroMQ to achieve riliable communication between the replicas.<br>
+<img src="https://github.com/ZedLee/CRDTJewel/blob/master/img/WechatIMG2831.jpeg" width="480" height="200"></img>
 
 ## Library dependencies
 zeroMQ: http://zeromq.org<br>
@@ -11,6 +11,8 @@ log4z: https://github.com/zsummer/log4z<br>
 json: https://github.com/nlohmann/json<br>
 
 ### Reference
+[1]Conflict-free replicated data types, Shapiro, Marc; Preguiça, Nuno; Baquero, Carlos; Zawirski, Marek (2011-10-10), SSS'11 Proceedings of the 13th international conference on Stabilization, safety, and the security of distributed systems. Springer-Verlag Berlin, Heidelberg: 386–400 <br>
+[2]A service framework for operation-based CRDTs, Martin Krasser, 10/19/2016<br>
 
 ### Contact me 
 Email: aaa304482692@gmail.com
