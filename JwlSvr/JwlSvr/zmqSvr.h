@@ -20,8 +20,9 @@
 using namespace std;
 
 
-#define SERVER_ADDR "tcp://10.9.135.227:"
-//#define LOCAL_ADDR "tcp://localhost:"
+#define SERVER_ADDR "tcp://*:"
+//#define SERVER_ADDR "tcp://10.7.4.34:"
+#define LOCAL_ADDR "tcp://localhost:"
 #define SERVER_REP_PORT "10888"
 #define SERVER_PUB_PORT "10889"
 //#define SERVER_WORKER_PORT "10890"
